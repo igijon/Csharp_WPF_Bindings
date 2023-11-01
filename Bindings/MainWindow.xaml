@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel Margin="10">
+        <TextBox x:Name="txtContent" Text="Texto Simple"/>
         <Slider Name="sliderFontSize" Margin="3" Minimum="1" Maximum="40" Value="10" TickFrequency="1" TickPlacement="TopLeft"/>
-        <TextBlock Margin="10" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value}" Text="Texto simple" />
+        <TextBlock Margin="10" Name="lblSampleText" FontSize="{Binding ElementName=sliderFontSize, Path=Value , Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Delay=3000}" Text="{Binding ElementName=txtContent, Path=Text}" />
+        <StackPanel Orientation="Horizontal">
+            <Button Name="btnSmall" Click="btnSmall_Click" Margin="5">Pequeño</Button>
+            <Button Name="btnNormal" Click="btnNormal_Click" Margin="5">Normal</Button>
+            <Button Name="btnLarge" Click="btnLarge_Click" Margin="5">Grande</Button>
+        </StackPanel>
     </StackPanel>
 </Window>

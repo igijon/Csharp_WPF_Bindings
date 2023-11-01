@@ -24,5 +24,27 @@ namespace Bindings
         {
             InitializeComponent();
         }
+
+        private void btnSmall_Click(object sender, RoutedEventArgs e)
+        {
+            sliderFontSize.Value = 8;
+        }
+
+        private void btnNormal_Click(object sender, RoutedEventArgs e)
+        {
+            sliderFontSize.Value = 16;
+        }
+
+        private void btnLarge_Click(object sender, RoutedEventArgs e)
+        {
+            //sliderFontSize.Value = 30;
+            lblSampleText.FontSize = 30;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
     }
 }
