@@ -43,7 +43,11 @@ namespace Bindings
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            Binding binding = new Binding();
+            binding.Source = sliderFontSize;
+            binding.Path = new PropertyPath("Value");
+            binding.Mode = BindingMode.TwoWay;
+            lblSampleText.SetBinding(TextBlock.FontSizeProperty, binding);
         }
 
     }
