@@ -48,7 +48,8 @@ namespace Bindings
             binding.Path = new PropertyPath("Value");
             binding.Mode = BindingMode.TwoWay;
             lblSampleText.SetBinding(TextBlock.FontSizeProperty, binding);*/
-            BindingOperations.ClearAllBindings(lblSampleText);
+            //BindingOperations.ClearAllBindings(lblSampleText);
+            Binding binding2 = BindingOperations.GetBinding(lblSampleText, TextBlock.FontSizeProperty);
         }
 
     }
