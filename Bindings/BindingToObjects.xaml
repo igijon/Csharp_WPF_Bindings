@@ -13,5 +13,11 @@
         <TextBlock Text="{Binding Source={x:Static SystemFonts.IconFontFamily}, Path=Source}"></TextBlock>
         <TextBlock Text="{Binding Source={StaticResource CustomFont}, Path=Source}"></TextBlock>
         <TextBlock Text="{Binding Path=Title,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}} }"></TextBlock>
+        <StackPanel DataContext="{x:Static SystemFonts.IconFontFamily}">
+            <TextBlock Text="{Binding Path=Source}"></TextBlock>
+            <TextBlock Text="{Binding Path=LineSpacing}"></TextBlock>
+            <TextBlock Text="{Binding Path=FamilyTypefaces[0].Style}"></TextBlock>
+            <TextBlock Text="{Binding Path=FamilyTypefaces[0].Weight}"></TextBlock>
+        </StackPanel>
     </StackPanel>
 </Window>
