@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Bindings"
         mc:Ignorable="d"
         Title="BindingToObjects" Height="450" Width="800">
+    <Window.Resources>
+        <FontFamily x:Key="CustomFont">Calibri</FontFamily>
+    </Window.Resources>
     <StackPanel>
         <TextBlock Text="{Binding Source={x:Static SystemFonts.IconFontFamily}, Path=Source}"></TextBlock>
+        <TextBlock Text="{Binding Source={StaticResource CustomFont}, Path=Source}"></TextBlock>
+        <TextBlock Text="{Binding Path=Title,RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}} }"></TextBlock>
     </StackPanel>
 </Window>
